@@ -7,7 +7,7 @@ public class Controller : MonoBehaviour
 
     private Rigidbody2D rb;
     private float moveInput;
-    private float speed;
+    private float speed = 10f;
  
 
     void Start()
