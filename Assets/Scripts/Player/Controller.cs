@@ -9,6 +9,8 @@ public class Controller : MonoBehaviour
     private float moveInput;
     private float speed = 10f;
 
+    public TextMesh scoretext;
+
     private float inputHorizontal = 0;
  
 
