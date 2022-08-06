@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Controller : MonoBehaviour
 {
@@ -9,7 +10,9 @@ public class Controller : MonoBehaviour
     private float moveInput;
     private float speed = 10f;
 
-    public TextMesh scoretext;
+    private float topScore = 0.0f;
+
+    public Text scoreText;
 
     private float inputHorizontal = 0;
  
@@ -18,6 +21,20 @@ public class Controller : MonoBehaviour
     {
 
         rb = GetComponent<Rigidbody2D>();
+
+    }
+
+    void Update()
+    {
+        
+        if(rb.velocity.y > 0 && transform.position.y > topScore)
+        {
+
+            topScore = transform.position.y;
+
+        }
+
+        scoreText.text = "Score: " + Mathf.Round(topScore).ToString();
 
     }
 
