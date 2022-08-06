@@ -52,5 +52,4 @@ public class Controller : MonoBehaviour
         inputHorizontal = valor;
 
     }
-
 }
